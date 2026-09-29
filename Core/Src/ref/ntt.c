@@ -12,7 +12,27 @@ static const int32_t twist_table[LWE_N << 1] = { -4096, -2396745, -1838580, -107
 static
 int32_t const_buff[8] = {Qprime, Q, RmodQ, RmodQhi};
 
+
+int32_t caddq(int32_t a) {
+    a += (a >> 31) & Q;
+    return a;
+}
+
 // reduce a to (-Q/2, Q/2)
+int32_t freeze_32(int32_t a) {
+
+    int32_t remainder;
+    int32_t t;
+
+    t = ((a + (1 << 22)) >> 23);
+    remainder = a - (t * _Q);
+    remainder = caddq(remainder);
+    remainder = caddq(remainder);
+    return remainder;
+}
+
+// reduce a to (-Q/2, Q/2)
+/*
 int32_t freeze_32(int32_t a) {
 
     int32_t remainder;
@@ -38,7 +58,7 @@ int32_t freeze_32(int32_t a) {
 
     return remainder;
 }
-
+*/
 // we assume -Q / 2 < a < Q / 2
 int32_t gethi_h(int32_t a) {
 
