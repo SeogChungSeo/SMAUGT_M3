@@ -30,6 +30,11 @@ Repository for the review of ICT EXPRESS
 8. After the download is finished, the software is automatically executed and the result will be shown on the terminal
 <img width="1271" height="1509" alt="image" src="https://github.com/user-attachments/assets/a8639ff0-d8b8-446e-96e2-8beb34a69269" />
 
+# Testing information
+- The test program reports the average timing of 100 executions. You can modify _TIMES_ definition in the main.c file for more executions
+
+- The testing clock is configured as 30MHz and the source codes are build with optimization level -O3
+  
 - You can configure the security level of SMAUG-T in parameters.h file (SMAUG_MODE)
 
 - You can configure which test will be executed in main.c file (_TEST_POLYMUL_ or not)
