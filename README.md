@@ -1,5 +1,5 @@
 # SMAUGT_M3_ICTEXPRESS
-Repository for the review of ICT EXPRESS 
+Repository for the review of ICT EXPRESS. The title of the manuscript is "Optimized Implementation of SMAUG-T on Cortex-M3 for Secure IoT Communications and it is under major revision process.
 
 # Software and Hardware
 - STM32CubeIDE 1.18.1 software for building source code, debugging the project, and running the project
